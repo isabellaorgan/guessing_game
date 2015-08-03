@@ -1,0 +1,18 @@
+<script>
+	
+	var guess, answer, message;
+	//generate random number between 0 and 100
+	answer = Math.floor(Math.random() * 100 + 1);
+	console.log(answer); 
+	
+	guess = prompt("How many vinyl records do I own?");
+
+	if (guess == answer) {
+		message = "You must be a stalker!"
+	} else {
+		message = "Don't worry about it, how could you have known?"
+	}
+
+	alert(message);
+
+</script>
