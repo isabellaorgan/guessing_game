@@ -1,18 +1,21 @@
 <script>
 	
 	var guess, answer, message;
-	//answer is actual number of records I own
+	// answer is actual number of records I own
 	answer = 380;
 	console.log(answer); 
 	
 	guess = prompt("How many vinyl records do I own?");
 
 	if (guess == answer) {
-		message = "You must be a stalker!"
+		message = "You must be a stalker!";
 	} else {
-		message = "Don't worry about it, how could you have known?"
+		message = "Don't worry about it, how could you have known?";
 	}
+	// did not properly terminate lines 11 and 13 in original code
+	// fixed next day
 
 	alert(message);
 
 </script>
+
