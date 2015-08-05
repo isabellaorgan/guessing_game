@@ -1,52 +1,28 @@
+
 <script>
 
-	var guess, answer, message, userAttempts;
-	// answer is actual number of records I own
-	answer = 380;
-
-	console.log(answer); 
-	
-	guess = prompt("How many vinyl records do I own?");
-
-	if (guess == answer) {
-		message = "You must be a stalker!";
-	} else {
-		message = "Don't worry about it, how could you have known?";
-	}
-	// did not properly terminate lines 11 and 13 in original code
-	// fixed next day
-	console.log(answer); 
-	
-	guess = prompt("How many vinyl records do I own?");
-
-	if (guess == answer) {
-		message = "You must be a stalker!";
-	} else {
-		message = "Don't worry about it, how could you have known?";
-	}
-	// did not properly terminate lines 11 and 13 in original code
-	// fixed next day
-
-	userAttempts = 0;
-	message = "Don't worry about it, how could you have known?";
-	console.log(answer);
-
-	while (userAttempts < 5 && guess != answer){
-
-		guess = prompt("How many vinyl records do I own?");
-
-
-		if (guess == answer) {
-			message = "You must be a stalker!";
+function GuessingGame(question, answer, message1, message2){
+	this.question = question;
+	this.answer = answer			// answer is actual number of records I own
+	this.message1 = message1;
+	this.message2 = message2;
+	this.userAttempts = 0;
+	this.guess = '';
+	this.run = function(){
+		while (this.userAttempts < 5 && this.guess != this.answer){
+			this.guess = prompt(this.question);
+			if(this.guess == this.answer){
+				alert(this.message1);
+			} else {
+				alert(this.message2);
+			}
+			this.userAttempts++;
 		}
-			// did not properly terminate lines 11 and 13 in original code
-			// fixed next day
+	};
+};
 
-		userAttempts++;
+var game1 = new GuessingGame('How many vinyl records do you own?', 380, 'You must be a stalker', 'Don\'t worry about it, how could you have known');
+game1.run();
 
-	}
-	alert(message);
-	console.log(userAttempts);
 
 </script>
-
