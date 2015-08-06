@@ -1,52 +1,45 @@
-<script>
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+	<title>This is the title</title>
+	<link rel="stylesheet" href="css/ma	in.css">
+  </head>
 
+  <body>
+
+  	<h1>How Many Records do I own?</h1>
+
+  	<h2>Over the years, I've collected quite a few records.</h2>
+  	<p> I've got a whole collection from the 80's, featuring everything from punk bands like <a href="http://">TSOL</a> to the dulcet tones of <a href="http://">The Smiths.</a>
+  		I've also got a ton of <a href="http://">Jazz</a>
+  		and classic rock. <img src=" ">
+  		<h3> Game Instructions</h3>
+  		
+
+  	<p> This is a website. </p>
+
+
+<script>
 	var guess, answer, message, userAttempts;
 	// answer is actual number of records I own
 	answer = 380;
-
-	console.log(answer); 
-	
-	guess = prompt("How many vinyl records do I own?");
-
-	if (guess == answer) {
-		message = "You must be a stalker!";
-	} else {
-		message = "Don't worry about it, how could you have known?";
-	}
-	// did not properly terminate lines 11 and 13 in original code
-	// fixed next day
-	console.log(answer); 
-	
-	guess = prompt("How many vinyl records do I own?");
-
-	if (guess == answer) {
-		message = "You must be a stalker!";
-	} else {
-		message = "Don't worry about it, how could you have known?";
-	}
-	// did not properly terminate lines 11 and 13 in original code
-	// fixed next day
-
 	userAttempts = 0;
 	message = "Don't worry about it, how could you have known?";
 	console.log(answer);
-
 	while (userAttempts < 5 && guess != answer){
-
 		guess = prompt("How many vinyl records do I own?");
-
-
 		if (guess == answer) {
 			message = "You must be a stalker!";
 		}
 			// did not properly terminate lines 11 and 13 in original code
 			// fixed next day
-
 		userAttempts++;
-
 	}
 	alert(message);
 	console.log(userAttempts);
-
 </script>
+
+ </body>
+ </html>
 
