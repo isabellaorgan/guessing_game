@@ -7,16 +7,6 @@
 	<link rel="stylesheet" href="css/ma	in.css">
   </head>
 
-<script>
-
-<!DOCTYPE html>
-<html>
-  <head>
-  	<meta charset="utf-8">
-	<title>Record Guessing Game</title>
-	<link rel="stylesheet" href="css/ma	in.css">
-  </head>
-
   <body bgcolor="d3d3d3">
   	<!--This is a header that I made out of a couple of my own photos-->
 	<header><img src="https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/11836777_956687727719692_3225466480979900645_n.jpg?oh=091fa1d705f0daf95d272d905f7e6bb7&oe=56504603"></header>
@@ -65,130 +55,29 @@
 		<footer><h6>This fun game brought to you by Bella - B33 - CodeFellows</h6></footer>
   
 
-
-// <script>
-// 	var guess, answer, message, userAttempts;
-// 	// answer is actual number of records I own
-// 	answer = 380;
-// 	userAttempts = 0;
-// 	message = "Don't worry about it, how could you have known?";
-// 	console.log(answer);
-// 	while (userAttempts < 5 && guess != answer){
-// 		guess = prompt("How many vinyl records do I own?");
-// 		if (guess == answer) {
-// 			message = "You must be a stalker!";
-// 		}
-// 			// did not properly terminate lines 11 and 13 in original code
-// 			// fixed next day
-// 		userAttempts++;
-// 	}
-// 	alert(message);
-// 	console.log(userAttempts);
-// </script>
+  <script>
+  	var guess, answer, message, userAttempts;
+  	// answer is actual number of records I own
+  	answer = 380;
+  	userAttempts = 0;
+  	message = "Don't worry about it, how could you have known?";
+  	console.log(answer);
+  	while (userAttempts < 5 && guess != answer){
+  		guess = prompt("How many vinyl records do I own?");
+  		if (guess == answer) {
+  			message = "You must be a stalker!";
+  		}
+  			// did not properly terminate lines 11 and 13 in original code
+  			// fixed next day
+  		userAttempts++;
+  	}
+  	alert(message);
+  	console.log(userAttempts);
+  </script>
 
  </body>
- </html>
+</html>
 
 
 
-  <body bgcolor="d3d3d3">
-  	<!--This is a header that I made out of a couple of my own photos-->
-	<header><img src="https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/11836777_956687727719692_3225466480979900645_n.jpg?oh=091fa1d705f0daf95d272d905f7e6bb7&oe=56504603"></header>
-  	<!-- This is the title of the game-->
-  	<h1>How Many Records do I own?</h1>
-	<!--A bit of backstory on me, how this game came about-->
-  	<article><h2>Over the years, I've collected quite a few records.</h2>
-  	<nav><p> I've got a whole collection from the 80's, featuring everything from punk bands like <a href="http://www.deadkennedys.com/">Dead Kennedys</a> to the New Wave stylings of <a href="http://www.yazooinfo.com/">Yaz.</a>
-  		<br>
-  		I've also got a ton of <a href="https://en.wikipedia.org/wiki/Jazz">Jazz</a>.</nav>
-  		<br>
-  		<b>Aaaaand classic rock.</b> 
-  		</p>
-  		<br>
-  		<!--I added this photo because I saw Robert Plant, doing a TON of Led Zeppelin songs at Sasquatch this year-->
-  		<img src="https://lintvkoin.files.wordpress.com/2015/05/robert-plant-sasquatch.jpg" alt="Robert Plant at Sasquatch 2015" height="270" width="400"></article>
-  		<br>
-  		<br>
-  		<!--subtitle for how to play-->
-  		<main><h3> Game Instructions</h3>
-  		<!--Instructions for how the game works-->
-  		<p>In this game, you will guess how many records I currently own. 
-  		<br>
-  		<strong>There is only one correct answer.</strong>
-  		<br>
-  		<i>You will have 5 opportunities to guess correctly.</i>
-  		</p>
-  		<br>
-  		<!--We can make a list of the guesses here, I think-->
-  		<h2>Just for fun, let's put your guesses here:</hs>
-  		<p> <ul>Guess 1</ul>
-  			<ul>Guess 1</ul>
-  			<ul>Guess 1</ul>
-  			<ul>Guess 1</ul>
-  			<ul>Guess 1</ul>
-  		</p>
-  		<br>
-  		<!--Maybe even show how many tries it took-->
-  		<p><h3>Did you get it? How many tries did it take?</h3></main>
-  		<!--Added an email form for funsies-->
-  		<form><p>If you like this game, email me.</p>
-  			<input type="email" name="email"/>
-  			<input type="submit" value="submit"/>
-  		</form>
-		<!--Added a footer to add include another element-->
-		<footer><h6>This fun game brought to you by Bella - B33 - CodeFellows</h6></footer>
   
-
-
-// <script>
-// 	var guess, answer, message, userAttempts;
-// 	// answer is actual number of records I own
-// 	answer = 380;
-// 	userAttempts = 0;
-// 	message = "Don't worry about it, how could you have known?";
-// 	console.log(answer);
-// 	while (userAttempts < 5 && guess != answer){
-// 		guess = prompt("How many vinyl records do I own?");
-// 		if (guess == answer) {
-// 			message = "You must be a stalker!";
-// 		}
-// 			// did not properly terminate lines 11 and 13 in original code
-// 			// fixed next day
-// 		userAttempts++;
-// 	}
-// 	alert(message);
-// 	console.log(userAttempts);
-// </script>
-
- </body>
- </html>
-
-
-<script>
-
-function GuessingGame(question, answer, message1, message2){
-	this.question = question;
-	this.answer = answer			// answer is actual number of records I own
-	this.message1 = message1;
-	this.message2 = message2;
-	this.userAttempts = 0;
-	this.guess = '';
-	this.run = function(){
-		while (this.userAttempts < 5 && this.guess != this.answer){
-			this.guess = prompt(this.question);
-			if(this.guess == this.answer){
-				alert(this.message1);
-			} else {
-				alert(this.message2);
-			}
-			this.userAttempts++;
-		}
-	};
-};
-
-var game1 = new GuessingGame('How many vinyl records do you own?', 380, 'You must be a stalker', 'Don\'t worry about it, how could you have known');
-game1.run();
-
-
-</script>
-
