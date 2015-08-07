@@ -8,23 +8,26 @@ console.log(answer);
 
   while (userAttempts < 5 && guess != answer){
    guess = prompt("How many vinyl records do I own?");
+   addToGuessList(guess)
     if (guess == answer) {
       message = "You must be a stalker!";
     }
     userAttempts++;
   }
 
+  console.log(guess1);
+
 var recordCounter = document.getElementById('record-counter');
   recordCounter.innerHTML = message;
 
-  function addToGuessList() {
+  function addToGuessList(gs) {
    var guessListItem = document.createElement('li');
-   var guessNode = document.createTextNode(guess1);
+   var guessNode = document.createTextNode(gs);
    guessListItem.appendChild(guessNode);
-   document.getElementById('guess-list').appendChild(guessListItem);
+   document.getElementById('guesslist').appendChild(guessListItem);
+  
   }
-  // alert(message);
-  console.log(userAttempts);
+
 
 
 
