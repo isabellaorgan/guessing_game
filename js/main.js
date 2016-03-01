@@ -1,14 +1,13 @@
 
 var guess, answer, message, userAttempts, guess1;
-// answer is actual number of records I own
 answer = 380;
 userAttempts = 0;
 message = "Don't worry about it, how could you have known?";
 console.log(answer);
 
-  while (userAttempts < 5 && guess != answer){
+  while (userAttempts < 5 && guess != answer) {
    guess = prompt("How many vinyl records do I own?");
-   addToGuessList(guess)
+   addToGuessList(guess);
     if (guess == answer) {
       message = "You must be a stalker!";
     }
